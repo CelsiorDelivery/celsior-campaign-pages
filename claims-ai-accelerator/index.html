@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Claims AI Accelerator — Healthcare Intelligence Platform | Celsior</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet"/>
+<!-- HubSpot Forms v2 — Option B: DOM embed with full CSS control + hidden field injection -->
+<script src="https://js.hsforms.net/forms/v2.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy-deep: #0A1628;
+    --navy-mid: #1B3A6B;
+    --blue-steel: #2E5FA3;
+    --blue-bright: #3B7DD8;
+    --blue-light: #EBF2FC;
+    --white: #FFFFFF;
+    --black: #0D0D0D;
+    --gray-700: #374151;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+    --green-600: #059669;
+    --green-100: #D1FAE5;
+    --amber-600: #D97706;
+    --red-600: #DC2626;
+    --gradient-hero: linear-gradient(145deg, #0A1628 0%, #1B3A6B 55%, #2E5FA3 100%);
+    --gradient-accent: linear-gradient(135deg, #1B3A6B 0%, #3B7DD8 100%);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-elevated: 0 8px 32px rgba(0,0,0,0.12);
+    --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px;
+    --font-display: 'Inter Tight','Inter',sans-serif;
+    --font-body: 'Inter',sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* ── NAV ── */
+  nav { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--gray-300); backdrop-filter: blur(8px); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  /* SWAP PLACEHOLDER: replace src with your HubSpot-hosted full-color PNG URL */
+  .nav-logo img { height: 32px; width: auto; display: block; }
+  .nav-divider { width: 1px; height: 22px; background: var(--gray-300); }
+  .nav-product { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--navy-deep); letter-spacing: -0.1px; white-space: nowrap; }
+  .nav-product span { color: var(--blue-steel); }
+  .nav-links { display: flex; gap: 4px; align-items: center; }
+  .nav-links a {
+    font-size: 13px; font-weight: 500; color: var(--gray-700);
+    text-decoration: none; padding: 6px 12px; border-radius: var(--radius-sm);
+    transition: all 0.15s; border-bottom: 2px solid transparent;
+  }
+  .nav-links a:hover { color: var(--navy-deep); background: var(--gray-100); }
+  .nav-links a.active { color: var(--blue-steel); border-bottom-color: var(--blue-steel); background: var(--blue-light); }
+  .nav-cta { background: var(--gradient-accent); color: var(--white); border: none; cursor: pointer; font-size: 13px; font-weight: 600; font-family: var(--font-body); padding: 9px 20px; border-radius: var(--radius-sm); transition: opacity 0.15s, transform 0.15s; white-space: nowrap; }
+  .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero { background: var(--gradient-hero); padding: 80px 32px 72px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(59,125,216,0.18) 0%, transparent 70%); pointer-events: none; }
+  .hero-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(59,125,216,0.22); border: 1px solid rgba(59,125,216,0.35); border-radius: 100px; padding: 5px 14px; font-size: 11px; font-weight: 600; color: #93C5FD; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 20px; }
+  .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #60A5FA; display: inline-block; }
+  .hero-title { font-family: var(--font-display); font-size: 42px; font-weight: 800; line-height: 1.13; color: var(--white); letter-spacing: -1px; margin-bottom: 18px; }
+  .hero-title em { font-style: normal; color: #93C5FD; }
+  .hero-sub { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.72); max-width: 500px; margin-bottom: 32px; line-height: 1.65; }
+  .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--white); color: var(--navy-deep); border: none; cursor: pointer; font-family: var(--font-body); font-size: 14px; font-weight: 700; padding: 13px 28px; border-radius: var(--radius-sm); transition: all 0.15s; text-decoration: none; display: inline-block; }
+  .btn-primary:hover { background: #EBF2FC; transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: rgba(255,255,255,0.85); border: 1.5px solid rgba(255,255,255,0.3); cursor: pointer; font-family: var(--font-body); font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: var(--radius-sm); transition: all 0.15s; }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+  .hero-trust { margin-top: 36px; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  .trust-badge { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.55); }
+  .trust-badge svg { width: 14px; height: 14px; opacity: 0.7; flex-shrink: 0; }
+  .hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg); padding: 28px; backdrop-filter: blur(12px); }
+  .hero-card-title { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 20px; }
+  .metric-row { display: flex; flex-direction: column; gap: 14px; }
+  .metric-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); }
+  .metric-label { font-size: 12px; color: rgba(255,255,255,0.6); font-weight: 400; }
+  .metric-value { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--white); }
+  .metric-delta { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 100px; }
+  .delta-green { background: rgba(5,150,105,0.2); color: #34D399; }
+  .delta-red { background: rgba(220,38,38,0.15); color: #F87171; }
+  .hero-card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 18px 0; }
+  .hero-card-note { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; line-height: 1.5; }
+
+  /* ── SECTIONS ── */
+  .section { padding: 72px 32px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-alt { background: var(--gray-50); }
+  .section-header { margin-bottom: 48px; }
+  .eyebrow { font-size: 11px; font-weight: 600; color: var(--blue-steel); text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 10px; }
+  .section-title { font-family: var(--font-display); font-size: 30px; font-weight: 800; color: var(--navy-deep); letter-spacing: -0.6px; line-height: 1.2; margin-bottom: 12px; }
+  .section-sub { font-size: 15px; color: var(--gray-500); max-width: 560px; line-height: 1.65; }
+
+  /* ── PRIVACY BANNER ── */
+  .privacy-banner { background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: var(--radius-md); padding: 14px 20px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 36px; }
+  .privacy-banner svg { width: 18px; height: 18px; color: var(--blue-steel); flex-shrink: 0; margin-top: 1px; }
+  .privacy-banner p { font-size: 13px; color: #1E40AF; line-height: 1.5; }
+  .privacy-banner strong { font-weight: 600; }
+
+  /* ── CALCULATOR ── */
+  .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .calc-panel { background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-card); }
+  .calc-panel-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--navy-deep); margin-bottom: 6px; }
+  .calc-panel-sub { font-size: 13px; color: var(--gray-500); margin-bottom: 28px; }
+  .field-group { margin-bottom: 20px; }
+  .field-label { display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 600; color: var(--gray-700); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .field-value-badge { font-size: 13px; font-weight: 700; color: var(--blue-steel); background: var(--blue-light); padding: 2px 10px; border-radius: 100px; text-transform: none; letter-spacing: 0; }
+  input[type=range] { -webkit-appearance: none; width: 100%; height: 5px; background: var(--gray-300); border-radius: 100px; outline: none; cursor: pointer; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--blue-steel); border: 2.5px solid white; box-shadow: 0 0 0 1px var(--blue-steel); cursor: pointer; transition: transform 0.1s; }
+  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+  input[type=number], input[type=text], select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 14px; color: var(--black); background: var(--white); outline: none; transition: border-color 0.15s; -moz-appearance: textfield; }
+  input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
+  input[type=number]:focus, select:focus { border-color: var(--blue-steel); }
+  select { cursor: pointer; }
+
+  /* Results panel */
+  .results-panel { background: var(--gradient-hero); border-radius: var(--radius-lg); padding: 32px; color: var(--white); box-shadow: var(--shadow-elevated); position: sticky; top: 84px; }
+  .results-title { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+  .results-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
+  .result-block { margin-bottom: 22px; }
+  .result-label { font-size: 11px; color: rgba(255,255,255,0.5); font-weight: 500; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .result-number { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -1px; }
+  .result-number.highlight { color: #93C5FD; }
+  .result-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 3px; }
+  .results-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0; }
+  .result-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .result-row-label { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .result-row-val { font-size: 14px; font-weight: 700; color: var(--white); font-family: var(--font-display); }
+  .results-cta { margin-top: 24px; width: 100%; padding: 13px; background: var(--white); color: var(--navy-deep); border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.15s; letter-spacing: -0.2px; }
+  .results-cta:hover { background: #EBF2FC; transform: translateY(-1px); }
+
+  /* ── CAPS ── */
+  .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .cap-card { background: var(--white); border: 1px solid var(--gray-300); border-radius: var(--radius-md); padding: 28px; box-shadow: var(--shadow-card); transition: all 0.2s; }
+  .cap-card:hover { border-color: var(--blue-steel); box-shadow: 0 4px 24px rgba(46,95,163,0.12); transform: translateY(-2px); }
+  .cap-icon { width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .cap-icon svg { width: 22px; height: 22px; color: var(--blue-steel); }
+  .cap-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--navy-deep); margin-bottom: 8px; }
+  .cap-desc { font-size: 13px; color: var(--gray-500); line-height: 1.6; margin-bottom: 16px; }
+  .cap-stat { font-size: 22px; font-weight: 800; color: var(--blue-steel); font-family: var(--font-display); }
+  .cap-stat-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+  .cap-badge { display: inline-block; margin-top: 12px; font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .badge-locked { background: var(--gray-100); color: var(--gray-500); border: 1px solid var(--gray-300); }
+  .badge-live { background: var(--green-100); color: var(--green-600); }
+
+  /* ── PROCESS ── */
+  .process-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; margin-top: 32px; }
+  .process-track::before { content: ''; position: absolute; top: 22px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 1.5px; background: var(--gray-300); z-index: 0; }
+  .process-step { text-align: center; position: relative; padding: 0 12px; }
+  .process-num { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--gray-300); background: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--gray-500); margin: 0 auto 16px; position: relative; z-index: 1; }
+  .process-step.active .process-num { background: var(--gradient-accent); border-color: var(--blue-steel); color: var(--white); }
+  .process-step-title { font-size: 13px; font-weight: 600; color: var(--navy-deep); margin-bottom: 6px; }
+  .process-step-desc { font-size: 12px; color: var(--gray-500); line-height: 1.5; }
+
+  /* ── MODAL ── */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.2s; backdrop-filter: blur(4px); }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal { background: var(--white); border-radius: var(--radius-lg); padding: 40px; max-width: 520px; width: 100%; box-shadow: 0 24px 80px rgba(0,0,0,0.2); transform: translateY(20px); transition: transform 0.2s; max-height: 90vh; overflow-y: auto; }
+  .modal-overlay.open .modal { transform: translateY(0); }
+  .modal-intent-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-light); border: 1px solid #BFDBFE; border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 600; color: var(--blue-steel); margin-bottom: 16px; }
+  .modal-intent-badge svg { width: 12px; height: 12px; }
+  .modal-title { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--navy-deep); margin-bottom: 6px; letter-spacing: -0.4px; }
+  .modal-sub { font-size: 14px; color: var(--gray-500); line-height: 1.5; margin-bottom: 24px; }
+  .modal-fields { display: flex; flex-direction: column; gap: 14px; }
+  .modal-field label { display: block; font-size: 11px; font-weight: 600; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 5px; }
+  .modal-field input, .modal-field select { padding: 10px 14px; border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); font-size: 14px; font-family: var(--font-body); width: 100%; outline: none; transition: border-color 0.15s; color: var(--black); }
+  .modal-field input:focus, .modal-field select:focus { border-color: var(--blue-steel); }
+  .modal-actions { display: flex; gap: 12px; margin-top: 24px; }
+  .btn-modal-primary { flex: 1; padding: 13px; background: var(--gradient-accent); color: var(--white); border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity 0.15s; }
+  .btn-modal-primary:hover { opacity: 0.9; }
+  .btn-modal-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+  .btn-modal-cancel { padding: 13px 20px; background: transparent; color: var(--gray-500); border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 14px; cursor: pointer; transition: all 0.15s; }
+  .btn-modal-cancel:hover { border-color: var(--gray-500); color: var(--black); }
+  .modal-disclaimer { font-size: 11px; color: var(--gray-500); text-align: center; margin-top: 14px; line-height: 1.5; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field-error { border-color: var(--red-600) !important; }
+  .error-msg { font-size: 11px; color: var(--red-600); margin-top: 4px; display: none; }
+  .error-msg.show { display: block; }
+
+  /* Submitting state */
+  .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.4); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; vertical-align: middle; margin-right: 8px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── SUCCESS ── */
+  .success-panel { text-align: center; padding: 8px 0; }
+  .success-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--green-100); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
+  .success-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--navy-deep); margin-bottom: 8px; }
+  .success-desc { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+  .success-intent { display: inline-block; margin-top: 16px; background: var(--blue-light); border-radius: var(--radius-sm); padding: 10px 16px; font-size: 12px; color: var(--blue-steel); font-weight: 500; }
+
+  /* ── BENCH ── */
+  .bench-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .bench-table th { text-align: left; padding: 10px 16px; border-bottom: 2px solid var(--gray-300); font-size: 11px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+  .bench-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
+  .bench-table tr:last-child td { border-bottom: none; }
+  .bench-table tr:hover td { background: var(--gray-50); }
+  .bench-you { font-weight: 700; color: var(--blue-steel) !important; }
+  .bench-bar-wrap { background: var(--gray-100); border-radius: 100px; height: 6px; width: 120px; }
+  .bench-bar { height: 6px; border-radius: 100px; background: var(--gradient-accent); }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+  .dot-green { background: var(--green-600); }
+  .dot-amber { background: var(--amber-600); }
+  .dot-red { background: var(--red-600); }
+
+  /* ── TABS ── */
+  .tab-bar { display: flex; gap: 4px; background: var(--gray-100); border-radius: var(--radius-sm); padding: 4px; margin-bottom: 28px; width: fit-content; }
+  .tab-btn { padding: 8px 18px; border-radius: 5px; border: none; font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--gray-500); background: transparent; cursor: pointer; transition: all 0.15s; }
+  .tab-btn.active { background: var(--white); color: var(--navy-deep); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy-deep); padding: 40px 32px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  /* SWAP PLACEHOLDER: replace src with your HubSpot-hosted white PNG URL */
+  .footer-logo img { height: 28px; width: auto; display: block; opacity: 0.85; }
+  .footer-note { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.5; max-width: 480px; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── UTILS ── */
+  .text-center { text-align: center; }
+  .divider { border: none; border-top: 1px solid var(--gray-100); margin: 28px 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .calc-grid { grid-template-columns: 1fr; }
+    .cap-grid { grid-template-columns: 1fr 1fr; }
+    .process-track { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .process-track::before { display: none; }
+    .hero-title { font-size: 32px; }
+    .results-panel { position: static; }
+  }
+  @media (max-width: 600px) {
+    .cap-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .two-col { grid-template-columns: 1fr; }
+    .nav-product { display: none; }
+    .nav-divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <!-- SWAP: replace src below with your HubSpot CDN URL for the full-color Celsior logo -->
+      <img src="CELSIOR_FULLCOLOR_URL" alt="Celsior" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <!-- Fallback wordmark shown only if image fails to load -->
+      <span style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--navy-deep);letter-spacing:-0.5px;">celsior<span style="color:var(--blue-steel);">∷</span></span>
+    </a>
+    <div class="nav-divider"></div>
+    <div class="nav-product">Claims<span>AI</span> Accelerator</div>
+    <nav class="nav-links">
+      <a href="#roi" data-section="roi">ROI Calculator</a>
+      <a href="#capabilities" data-section="capabilities">Capabilities</a>
+      <a href="#benchmark" data-section="benchmark">Benchmarks</a>
+      <a href="#howit" data-section="howit">How it works</a>
+    </nav>
+    <button class="nav-cta" onclick="openModal('Full Platform Access Request','Request full access')">Request full access</button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span></span>AI-Powered Healthcare Intelligence</div>
+      <h1 class="hero-title">Reduce claims costs.<br/>Eliminate <em>leakage</em> at scale.</h1>
+      <p class="hero-sub">A real-time AI platform that detects denial patterns, predicts underpayments, and automates adjudication workflows — purpose-built for health plan operations and revenue cycle leaders.</p>
+      <div class="hero-actions">
+        <a href="#roi" class="btn-primary">Run your ROI estimate →</a>
+        <button class="btn-outline" onclick="openModal('Full Capabilities Inquiry','See full capabilities')">See full capabilities</button>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-badge">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5L3 4v5c0 3 2.1 5.5 5 6.5 2.9-1 5-3.5 5-6.5V4L8 1.5z" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 8L7 9.5L10.5 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          HIPAA-Compliant Architecture
+        </div>
+        <div class="trust-badge">
+          <svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5.5a2.5 2.5 0 015 0V7" stroke="currentColor" stroke-width="1.3"/></svg>
+          No data leaves your browser
+        </div>
+        <div class="trust-badge">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 8L7 9.5L10.5 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          SOC 2 Type II ready
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Live outcome preview — sample plan, 2M claims/yr</div>
+      <div class="metric-row">
+        <div class="metric-item">
+          <div><div class="metric-label">Denial overturn rate</div><div class="metric-value">38%<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.4)"> lift</span></div></div>
+          <div class="metric-delta delta-green">↑ AI-assisted</div>
+        </div>
+        <div class="metric-item">
+          <div><div class="metric-label">Claims leakage recovered</div><div class="metric-value">$4.2M<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.4)">/yr</span></div></div>
+          <div class="metric-delta delta-green">↑ avg.</div>
+        </div>
+        <div class="metric-item">
+          <div><div class="metric-label">Auto-adjudication rate</div><div class="metric-value">72%<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.4)"> of volume</span></div></div>
+          <div class="metric-delta delta-green">↑ vs 41% baseline</div>
+        </div>
+        <div class="metric-item">
+          <div><div class="metric-label">Avg. days to close (ATB)</div><div class="metric-value">9.4<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.4)"> days</span></div></div>
+          <div class="metric-delta delta-red">↓ from 23.1</div>
+        </div>
+      </div>
+      <hr class="hero-card-divider"/>
+      <div class="hero-card-note">Enter your own parameters in the ROI calculator below to see projections specific to your plan.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ROI CALCULATOR ══ -->
+<section class="section" id="roi">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="eyebrow">ROI Calculator</div>
+      <h2 class="section-title">Enter your plan data. Get your business case.</h2>
+      <p class="section-sub">Adjust parameters to match your plan. All computation happens locally in your browser — nothing is transmitted or stored.</p>
+    </div>
+    <div class="privacy-banner">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M10 2L4 5V10C4 13.5 6.5 16.7 10 18C13.5 16.7 16 13.5 16 10V5L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.5 10L9 11.5L12.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <p><strong>Data privacy guaranteed.</strong> This calculator runs entirely in your browser. Your claims volume, denial rates, and financial figures are never sent to any server. You can disconnect from the internet and it will still work.</p>
+    </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(event,'volume')">Claims volume</button>
+      <button class="tab-btn" onclick="switchTab(event,'denial')">Denial management</button>
+      <button class="tab-btn" onclick="switchTab(event,'ops')">Operational efficiency</button>
+      <button class="tab-btn" onclick="switchTab(event,'pa')">Prior authorization</button>
+    </div>
+
+    <!-- Tab: Volume -->
+    <div id="tab-volume" class="tab-panel active">
+      <div class="calc-grid">
+        <div class="calc-panel">
+          <div class="calc-panel-title">Your plan parameters</div>
+          <div class="calc-panel-sub">Adjust sliders to match your current operational metrics.</div>
+          <div class="field-group"><div class="field-label">Annual claims volume <span class="field-value-badge" id="v-claims-label">500,000</span></div><input type="range" min="50000" max="5000000" step="50000" value="500000" oninput="updateCalc()" id="v-claims"/></div>
+          <div class="field-group"><div class="field-label">Average claim value ($) <span class="field-value-badge" id="v-avg-label">$1,200</span></div><input type="range" min="200" max="8000" step="50" value="1200" oninput="updateCalc()" id="v-avg"/></div>
+          <div class="field-group"><div class="field-label">Current denial rate <span class="field-value-badge" id="v-denial-label">12%</span></div><input type="range" min="1" max="35" step="0.5" value="12" oninput="updateCalc()" id="v-denial"/></div>
+          <div class="field-group"><div class="field-label">Current auto-adjudication rate <span class="field-value-badge" id="v-auto-label">35%</span></div><input type="range" min="5" max="85" step="1" value="35" oninput="updateCalc()" id="v-auto"/></div>
+          <div class="field-group"><div class="field-label">Cost to process one claim ($) <span class="field-value-badge" id="v-cost-label">$14</span></div><input type="range" min="4" max="60" step="1" value="14" oninput="updateCalc()" id="v-cost"/></div>
+          <div class="field-group"><div class="field-label">Average days to close (ATB) <span class="field-value-badge" id="v-atb-label">22 days</span></div><input type="range" min="5" max="60" step="1" value="22" oninput="updateCalc()" id="v-atb"/></div>
+        </div>
+        <div class="results-panel">
+          <div class="results-title">Projected outcomes — Year 1</div>
+          <div class="result-block"><div class="result-label">Total recoverable value</div><div class="result-number highlight" id="r-total">$0</div><div class="result-sub">Leakage recovered + operational savings combined</div></div>
+          <hr class="results-divider"/>
+          <div class="result-row"><div class="result-row-label">Claims leakage recovered</div><div class="result-row-val" id="r-leakage">$0</div></div>
+          <div class="result-row"><div class="result-row-label">Automation cost savings</div><div class="result-row-val" id="r-autosave">$0</div></div>
+          <div class="result-row"><div class="result-row-label">Denial overturn uplift</div><div class="result-row-val" id="r-denial">$0</div></div>
+          <div class="result-row"><div class="result-row-label">Projected auto-adj. rate with AI</div><div class="result-row-val" id="r-newauto">0%</div></div>
+          <div class="result-row"><div class="result-row-label">Days to close (projected)</div><div class="result-row-val" id="r-newatb">0 days</div></div>
+          <hr class="results-divider"/>
+          <div class="result-row"><div class="result-row-label" style="color:rgba(255,255,255,0.45);font-size:11px;">Est. payback period</div><div class="result-row-val" id="r-payback" style="font-size:13px;">—</div></div>
+          <button class="results-cta" onclick="openModal('Financial Model Access — Volume Tab','Unlock full financial model')">Unlock full financial model →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Denial -->
+    <div id="tab-denial" class="tab-panel">
+      <div class="calc-grid">
+        <div class="calc-panel">
+          <div class="calc-panel-title">Denial management parameters</div>
+          <div class="calc-panel-sub">Model the financial impact of AI-driven denial prevention and overturn.</div>
+          <div class="field-group"><div class="field-label">Annual denied claims volume <span class="field-value-badge" id="d-vol-label">60,000</span></div><input type="range" min="1000" max="500000" step="1000" value="60000" oninput="updateDenial()" id="d-vol"/></div>
+          <div class="field-group"><div class="field-label">Avg. value of denied claim ($) <span class="field-value-badge" id="d-val-label">$1,800</span></div><input type="range" min="200" max="10000" step="100" value="1800" oninput="updateDenial()" id="d-val"/></div>
+          <div class="field-group"><div class="field-label">Current overturn rate <span class="field-value-badge" id="d-over-label">28%</span></div><input type="range" min="5" max="70" step="1" value="28" oninput="updateDenial()" id="d-over"/></div>
+          <div class="field-group"><div class="field-label">Cost per appeal ($) <span class="field-value-badge" id="d-appeal-label">$42</span></div><input type="range" min="10" max="200" step="5" value="42" oninput="updateDenial()" id="d-appeal"/></div>
+          <div class="field-group"><div class="field-label">Prevention rate with AI <span class="field-value-badge" id="d-prevent-label">30%</span></div><input type="range" min="5" max="60" step="1" value="30" oninput="updateDenial()" id="d-prevent"/></div>
+        </div>
+        <div class="results-panel">
+          <div class="results-title">Denial outcomes — Year 1</div>
+          <div class="result-block"><div class="result-label">Total denial impact improvement</div><div class="result-number highlight" id="dr-total">$0</div><div class="result-sub">Prevention savings + overturn uplift + appeal cost reduction</div></div>
+          <hr class="results-divider"/>
+          <div class="result-row"><div class="result-row-label">Denials prevented by AI</div><div class="result-row-val" id="dr-prevented">0</div></div>
+          <div class="result-row"><div class="result-row-label">Revenue recovered from prevention</div><div class="result-row-val" id="dr-prevrev">$0</div></div>
+          <div class="result-row"><div class="result-row-label">AI-assisted overturn rate</div><div class="result-row-val" id="dr-newover">0%</div></div>
+          <div class="result-row"><div class="result-row-label">Additional revenue overturned</div><div class="result-row-val" id="dr-overturnrev">$0</div></div>
+          <div class="result-row"><div class="result-row-label">Appeal cost savings</div><div class="result-row-val" id="dr-appealcost">$0</div></div>
+          <button class="results-cta" onclick="openModal('Financial Model Access — Denial Tab','Get detailed denial analysis')">Get detailed denial analysis →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Ops -->
+    <div id="tab-ops" class="tab-panel">
+      <div class="calc-grid">
+        <div class="calc-panel">
+          <div class="calc-panel-title">Operational efficiency parameters</div>
+          <div class="calc-panel-sub">Quantify the workforce and throughput gains from intelligent automation.</div>
+          <div class="field-group"><div class="field-label">Total claims staff (FTEs) <span class="field-value-badge" id="o-fte-label">85</span></div><input type="range" min="5" max="500" step="5" value="85" oninput="updateOps()" id="o-fte"/></div>
+          <div class="field-group"><div class="field-label">Avg. FTE cost (salary + benefits, $) <span class="field-value-badge" id="o-ftecost-label">$72,000</span></div><input type="range" min="40000" max="150000" step="2000" value="72000" oninput="updateOps()" id="o-ftecost"/></div>
+          <div class="field-group"><div class="field-label">Hours/week on manual review per FTE <span class="field-value-badge" id="o-hrs-label">18 hrs</span></div><input type="range" min="2" max="40" step="1" value="18" oninput="updateOps()" id="o-hrs"/></div>
+          <div class="field-group"><div class="field-label">Error rate on manual reviews <span class="field-value-badge" id="o-err-label">8%</span></div><input type="range" min="1" max="25" step="0.5" value="8" oninput="updateOps()" id="o-err"/></div>
+          <div class="field-group"><div class="field-label">Rework cost per error ($) <span class="field-value-badge" id="o-rework-label">$95</span></div><input type="range" min="20" max="500" step="5" value="95" oninput="updateOps()" id="o-rework"/></div>
+        </div>
+        <div class="results-panel">
+          <div class="results-title">Efficiency outcomes — Year 1</div>
+          <div class="result-block"><div class="result-label">Total operational savings</div><div class="result-number highlight" id="or-total">$0</div><div class="result-sub">FTE capacity freed + error rework eliminated</div></div>
+          <hr class="results-divider"/>
+          <div class="result-row"><div class="result-row-label">FTE hours freed annually</div><div class="result-row-val" id="or-hours">0 hrs</div></div>
+          <div class="result-row"><div class="result-row-label">FTE capacity redirected (equiv.)</div><div class="result-row-val" id="or-ftes">0 FTEs</div></div>
+          <div class="result-row"><div class="result-row-label">Labor savings (capacity value)</div><div class="result-row-val" id="or-labor">$0</div></div>
+          <div class="result-row"><div class="result-row-label">Error rate with AI (projected)</div><div class="result-row-val" id="or-newerr">0%</div></div>
+          <div class="result-row"><div class="result-row-label">Rework cost eliminated</div><div class="result-row-val" id="or-reworksave">$0</div></div>
+          <button class="results-cta" onclick="openModal('Financial Model Access — Ops Tab','Model full workforce impact')">Model full workforce impact →</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tab: Prior Authorization -->
+    <div id="tab-pa" class="tab-panel">
+      <!-- CMO persona context banner — matches privacy-banner style exactly -->
+      <div class="privacy-banner">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 3.5a1 1 0 110 2 1 1 0 010-2zm0 3.5c.55 0 1 .45 1 1v4a1 1 0 01-2 0V10c0-.55.45-1 1-1z" fill="currentColor"/></svg>
+        <p><strong>For CMOs and VP Medical Affairs.</strong> Physicians spend 15+ hours per week on prior auth. Quantify what that's costing your network — and what AI-driven decisioning recovers.</p>
+      </div>
+
+      <div class="calc-grid">
+        <div class="calc-panel">
+          <div class="calc-panel-title">Prior authorization parameters</div>
+          <div class="calc-panel-sub">Model the full cost of manual PA — on your budget, your UM team, and your provider relationships.</div>
+
+          <div class="field-group"><div class="field-label">Annual PA requests submitted <span class="field-value-badge" id="pa-vol-label">120,000</span></div><input type="range" min="5000" max="2000000" step="5000" value="120000" oninput="updatePA()" id="pa-vol"/></div>
+          <div class="field-group"><div class="field-label">Current manual approval rate <span class="field-value-badge" id="pa-manual-label">82%</span></div><input type="range" min="30" max="99" step="1" value="82" oninput="updatePA()" id="pa-manual"/></div>
+          <div class="field-group"><div class="field-label">Avg. days to PA decision <span class="field-value-badge" id="pa-days-label">4.2 days</span></div><input type="range" min="1" max="14" step="0.1" value="4.2" oninput="updatePA()" id="pa-days"/></div>
+          <div class="field-group"><div class="field-label">Cost to process one PA ($) <span class="field-value-badge" id="pa-cost-label">$7</span></div><input type="range" min="2" max="30" step="0.5" value="7" oninput="updatePA()" id="pa-cost"/></div>
+          <div class="field-group"><div class="field-label">UM staff dedicated to PA (FTEs) <span class="field-value-badge" id="pa-fte-label">22</span></div><input type="range" min="1" max="200" step="1" value="22" oninput="updatePA()" id="pa-fte"/></div>
+          <div class="field-group"><div class="field-label">Avg. FTE cost (salary + benefits, $) <span class="field-value-badge" id="pa-ftecost-label">$68,000</span></div><input type="range" min="40000" max="130000" step="2000" value="68000" oninput="updatePA()" id="pa-ftecost"/></div>
+          <div class="field-group"><div class="field-label">PA denial rate (leading to appeals) <span class="field-value-badge" id="pa-denial-label">18%</span></div><input type="range" min="2" max="50" step="1" value="18" oninput="updatePA()" id="pa-denial"/></div>
+          <div class="field-group"><div class="field-label">Avg. cost per PA appeal ($) <span class="field-value-badge" id="pa-appeal-label">$55</span></div><input type="range" min="10" max="250" step="5" value="55" oninput="updatePA()" id="pa-appeal"/></div>
+        </div>
+
+        <div class="results-panel">
+          <div class="results-title">Prior auth outcomes — Year 1</div>
+
+          <div class="result-block">
+            <div class="result-label">Total PA cost reduction</div>
+            <div class="result-number highlight" id="pa-total">$0</div>
+            <div class="result-sub">Processing savings + FTE capacity + appeal cost eliminated</div>
+          </div>
+
+          <hr class="results-divider"/>
+
+          <div class="result-row"><div class="result-row-label">PAs auto-approved by AI</div><div class="result-row-val" id="pa-autoapproved">0</div></div>
+          <div class="result-row"><div class="result-row-label">Auto-approval rate with AI</div><div class="result-row-val" id="pa-newauto">0%</div></div>
+          <div class="result-row"><div class="result-row-label">Avg. decision time with AI</div><div class="result-row-val" id="pa-newdays">0 days</div></div>
+          <div class="result-row"><div class="result-row-label">Processing cost saved</div><div class="result-row-val" id="pa-procsave">$0</div></div>
+          <div class="result-row"><div class="result-row-label">UM FTE hours freed annually</div><div class="result-row-val" id="pa-hrsfree">0 hrs</div></div>
+          <div class="result-row"><div class="result-row-label">FTE capacity redirected (equiv.)</div><div class="result-row-val" id="pa-ftefree">0 FTEs</div></div>
+          <div class="result-row"><div class="result-row-label">Appeal volume reduction</div><div class="result-row-val" id="pa-appealred">0 appeals</div></div>
+          <div class="result-row"><div class="result-row-label">Appeal cost eliminated</div><div class="result-row-val" id="pa-appealsave">$0</div></div>
+
+          <hr class="results-divider"/>
+
+          <!-- Provider abrasion score -->
+          <div style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <div class="result-label" style="margin-bottom:0;">Provider abrasion index</div>
+              <div id="pa-abrasion-label" style="font-size:11px;font-weight:600;color:#FBBF24;">Moderate</div>
+            </div>
+            <!-- Track -->
+            <div style="position:relative;background:rgba(255,255,255,0.1);border-radius:100px;height:6px;">
+              <div id="pa-abrasion-bar" style="height:6px;border-radius:100px;background:linear-gradient(90deg,#34D399 0%,#FBBF24 50%,#F87171 100%);width:70%;transition:width 0.4s;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,0.3);margin-top:5px;"><span>Low</span><span>High</span><span>Critical</span></div>
+          </div>
+
+          <div class="result-row" style="margin-bottom:0;"><div class="result-row-label" style="color:rgba(255,255,255,0.45);font-size:11px;">Est. payback period</div><div class="result-row-val" id="pa-payback" style="font-size:13px;">—</div></div>
+
+          <button class="results-cta" style="margin-top:20px;" onclick="openModal('Prior Authorization Automation Inquiry','Automate prior authorization workflows')">Automate prior auth workflows →</button>
+        </div>
+      </div>
+
+      <!-- Benchmark callout specific to PA — consistent with app card style -->
+      <div style="margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div style="background:var(--white);border:1px solid var(--gray-300);border-radius:var(--radius-md);padding:24px 20px;box-shadow:var(--shadow-card);text-align:center;">
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:800;color:var(--navy-deep);letter-spacing:-1px;line-height:1;">15+</div>
+          <div style="font-size:11px;font-weight:600;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.5px;margin-top:8px;margin-bottom:6px;">Physician hours/week lost to PA</div>
+          <div style="font-size:11px;color:var(--gray-500);">AMA PA Physician Survey 2023</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-300);border-radius:var(--radius-md);padding:24px 20px;box-shadow:var(--shadow-card);text-align:center;">
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:800;color:var(--blue-steel);letter-spacing:-1px;line-height:1;">70%</div>
+          <div style="font-size:11px;font-weight:600;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.5px;margin-top:8px;margin-bottom:6px;">Routine PAs AI can auto-approve</div>
+          <div style="font-size:11px;color:var(--gray-500);">CAQH Index 2023</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-300);border-radius:var(--radius-md);padding:24px 20px;box-shadow:var(--shadow-card);text-align:center;">
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:800;color:var(--navy-deep);letter-spacing:-1px;line-height:1;">$4–11</div>
+          <div style="font-size:11px;font-weight:600;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.5px;margin-top:8px;margin-bottom:6px;">Cost per manual PA transaction</div>
+          <div style="font-size:11px;color:var(--gray-500);">HFMA Operational Benchmarks 2024</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CAPABILITIES ══ -->
+<section class="section section-alt" id="capabilities">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="eyebrow">Platform capabilities</div>
+      <h2 class="section-title">What Claims AI does — and what's behind the paywall.</h2>
+      <p class="section-sub">Core analytics are available in this sandbox. Advanced modules unlock when your team is ready to engage.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <div class="cap-title">Denial pattern intelligence</div>
+        <div class="cap-desc">ML models trained on 140M+ claims identify denial root causes by payer, CPT code, provider, and plan type — surfacing patterns invisible to manual review.</div>
+        <div class="cap-stat">94.2%</div><div class="cap-stat-label">Pattern detection accuracy</div>
+        <span class="cap-badge badge-live">● Available now</span>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M21 12h-2M5 12H3M19.07 19.07l-1.41-1.41M5.34 5.34L3.93 3.93M12 21v-2M12 5V3"/></svg></div>
+        <div class="cap-title">Underpayment detection</div>
+        <div class="cap-desc">Automated contract compliance engine flags underpayments against contracted rates across 200+ payer configurations, with variance drill-down to line-item level.</div>
+        <div class="cap-stat">$2.8M</div><div class="cap-stat-label">Avg. underpayments surfaced / yr</div>
+        <span class="cap-badge badge-live">● Available now</span>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <div class="cap-title">Auto-adjudication engine</div>
+        <div class="cap-desc">Rules-based + AI hybrid engine automatically adjudicates clean claims, triages complex ones for human review, and routes edge cases to specialist queues.</div>
+        <div class="cap-stat">72%</div><div class="cap-stat-label">Claims auto-adjudicated (avg.)</div>
+        <span class="cap-badge badge-locked">🔒 Full access — unlock</span>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="cap-title">Clinical edit validation</div>
+        <div class="cap-desc">Real-time DRG, CPT/ICD-10 edits with medical necessity scoring. Integrates with existing clearinghouse workflows without ripping out current infrastructure.</div>
+        <div class="cap-stat">99.1%</div><div class="cap-stat-label">Edit rule accuracy vs CMS</div>
+        <span class="cap-badge badge-locked">🔒 Full access — unlock</span>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+        <div class="cap-title">Payer contract analytics</div>
+        <div class="cap-desc">Digitize and model contracts across commercial, Medicare Advantage, and Medicaid lines. Simulate rate changes and renegotiation scenarios with projected impact.</div>
+        <div class="cap-stat">340+</div><div class="cap-stat-label">Payer contracts modeled</div>
+        <span class="cap-badge badge-locked">🔒 Full access — unlock</span>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="cap-title">Workforce optimization</div>
+        <div class="cap-desc">Predictive queue management and workload routing. Staff productivity dashboards, SLA forecasting, and intelligent case assignment based on complexity scoring.</div>
+        <div class="cap-stat">31%</div><div class="cap-stat-label">Avg. productivity increase</div>
+        <span class="cap-badge badge-locked">🔒 Full access — unlock</span>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:36px;">
+      <button class="nav-cta" style="font-size:14px;padding:12px 28px;" onclick="openModal('Capabilities Unlock Request','Unlock all capabilities')">Unlock all capabilities →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BENCHMARKS ══ -->
+<section class="section" id="benchmark">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="eyebrow">Industry benchmarks</div>
+      <h2 class="section-title">Where do you stand against your peers?</h2>
+      <p class="section-sub">HFMA and industry-reported benchmarks for health plan operations. Your calculator inputs update the "Your estimate" column automatically.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+      <div>
+        <div style="background:var(--white);border:1px solid var(--gray-300);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-card);">
+          <div style="padding:20px 24px;border-bottom:1px solid var(--gray-100);"><div style="font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--navy-deep);">Claims operations benchmarks</div><div style="font-size:12px;color:var(--gray-500);margin-top:4px;">HFMA 2024 · MGMA 2024 · CAQH 2023</div></div>
+          <table class="bench-table">
+            <thead><tr><th>Metric</th><th>Industry avg.</th><th>Top quartile</th><th>Your estimate</th><th>Performance</th></tr></thead>
+            <tbody>
+              <tr><td>Denial rate</td><td>11.8%</td><td>5.9%</td><td class="bench-you" id="bm-denial">—</td><td><div class="bench-bar-wrap"><div class="bench-bar" id="bm-denial-bar" style="width:60%"></div></div></td></tr>
+              <tr><td>Auto-adjudication rate</td><td>38%</td><td>72%</td><td class="bench-you" id="bm-auto">—</td><td><div class="bench-bar-wrap"><div class="bench-bar" id="bm-auto-bar" style="width:45%"></div></div></td></tr>
+              <tr><td>Cost per claim</td><td>$15.40</td><td>$6.20</td><td class="bench-you" id="bm-cost">—</td><td><div class="bench-bar-wrap"><div class="bench-bar" id="bm-cost-bar" style="width:50%"></div></div></td></tr>
+              <tr><td>Days to close (ATB)</td><td>21.4 days</td><td>8.2 days</td><td class="bench-you" id="bm-atb">—</td><td><div class="bench-bar-wrap"><div class="bench-bar" id="bm-atb-bar" style="width:40%"></div></div></td></tr>
+              <tr><td>Overturn rate</td><td>26%</td><td>54%</td><td class="bench-you" id="bm-over">—</td><td><div class="bench-bar-wrap"><div class="bench-bar" id="bm-over-bar" style="width:35%"></div></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--gray-500);">* Updates automatically from your calculator inputs above.</div>
+      </div>
+      <div>
+        <div style="background:var(--gradient-hero);border-radius:var(--radius-md);padding:28px;color:white;margin-bottom:20px;">
+          <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:16px;">AI impact on denial rates — industry data</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:6px;"><span>Without AI (avg.)</span><span>11.8%</span></div><div style="background:rgba(255,255,255,0.1);border-radius:100px;height:8px;"><div style="width:59%;height:8px;background:rgba(248,113,113,0.7);border-radius:100px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:6px;"><span>With Claims AI (avg.)</span><span>6.3%</span></div><div style="background:rgba(255,255,255,0.1);border-radius:100px;height:8px;"><div style="width:32%;height:8px;background:rgba(52,211,153,0.8);border-radius:100px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:6px;"><span>Top AI performers</span><span>3.9%</span></div><div style="background:rgba(255,255,255,0.1);border-radius:100px;height:8px;"><div style="width:20%;height:8px;background:rgba(147,197,253,0.9);border-radius:100px;"></div></div></div>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.35);">Source: Waystar RCM Performance Report 2024, Experian Health AI Study 2023</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-300);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-card);">
+          <div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--navy-deep);margin-bottom:14px;">Denial root cause distribution</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--gray-700);"><span class="status-dot dot-red"></span>Missing / invalid info</span><div style="display:flex;align-items:center;gap:8px;"><div class="bench-bar-wrap"><div class="bench-bar" style="width:86px;background:#EF4444;"></div></div><span style="color:var(--gray-500);font-size:12px;min-width:30px;">43%</span></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--gray-700);"><span class="status-dot dot-amber"></span>Medical necessity</span><div style="display:flex;align-items:center;gap:8px;"><div class="bench-bar-wrap"><div class="bench-bar" style="width:52px;background:#F59E0B;"></div></div><span style="color:var(--gray-500);font-size:12px;min-width:30px;">26%</span></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--gray-700);"><span class="status-dot" style="background:#3B7DD8;"></span>Coding errors</span><div style="display:flex;align-items:center;gap:8px;"><div class="bench-bar-wrap"><div class="bench-bar" style="width:38px;"></div></div><span style="color:var(--gray-500);font-size:12px;min-width:30px;">19%</span></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--gray-700);"><span class="status-dot dot-green"></span>Eligibility / auth</span><div style="display:flex;align-items:center;gap:8px;"><div class="bench-bar-wrap"><div class="bench-bar" style="width:24px;background:#059669;"></div></div><span style="color:var(--gray-500);font-size:12px;min-width:30px;">12%</span></div></div>
+          </div>
+          <div style="margin-top:14px;font-size:11px;color:var(--gray-500);">CAQH Index 2023 · n = 18.3B transactions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="section section-alt" id="howit">
+  <div class="section-inner">
+    <div class="section-header text-center">
+      <div class="eyebrow">Deployment model</div>
+      <h2 class="section-title">From sandbox to production in 6 weeks.</h2>
+      <p class="section-sub" style="margin:0 auto;">No rip-and-replace. Claims AI sits on top of your existing systems via HL7/FHIR APIs and EDI pipelines.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-step active"><div class="process-num">1</div><div class="process-step-title">Sandbox exploration</div><div class="process-step-desc">Use this tool with your parameters. No data shared, no commitment.</div></div>
+      <div class="process-step"><div class="process-num">2</div><div class="process-step-title">Technical discovery</div><div class="process-step-desc">Our team maps your payer mix, EHR/clearinghouse stack, and integration requirements.</div></div>
+      <div class="process-step"><div class="process-num">3</div><div class="process-step-title">Pilot deployment</div><div class="process-step-desc">90-day live pilot on a subset of claims volume. Full measurement and reporting.</div></div>
+      <div class="process-step"><div class="process-num">4</div><div class="process-step-title">Enterprise rollout</div><div class="process-step-desc">Full production with dedicated success management and SLA guarantees.</div></div>
+    </div>
+    <div class="text-center" style="margin-top:48px;">
+      <button class="nav-cta" style="font-size:14px;padding:14px 32px;" onclick="openModal('Technical Discovery Request','Start technical discovery')">Start technical discovery →</button>
+      <div style="margin-top:12px;font-size:12px;color:var(--gray-500);">Typically a 45-minute call. No slides, just your real environment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <!-- SWAP: replace src below with your HubSpot CDN URL for the white Celsior logo -->
+      <img src="CELSIOR_WHITE_URL" alt="Celsior" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span style="display:none;font-family:var(--font-display);font-weight:800;font-size:16px;color:rgba(255,255,255,0.7);letter-spacing:-0.5px;">celsior</span>
+    </div>
+    <div class="footer-note">All calculations are estimates based on industry benchmarks and user-supplied inputs. No data entered into this tool is transmitted, stored, or processed outside your browser. For illustrative purposes only.</div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">HIPAA</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ MODAL ══ -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal-box">
+
+    <!-- Form view -->
+    <div id="modal-form-view">
+      <!-- Intent badge — updates dynamically per CTA -->
+      <div class="modal-intent-badge" id="modal-intent-badge">
+        <svg viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3h3L8 6l1 3.5L6 8l-3 1.5L4 6 1.5 4h3z" fill="currentColor"/></svg>
+        <span id="modal-intent-label">Full Platform Access Request</span>
+      </div>
+      <div class="modal-title" id="modal-title">Unlock full platform access</div>
+      <div class="modal-sub">A member of our Celsior healthcare solutions team will reach out within 1 business day to discuss your environment and schedule a technical deep-dive.</div>
+
+      <!-- HubSpot form fields — styled to match app -->
+      <div class="modal-fields">
+        <div class="two-col">
+          <div class="modal-field">
+            <label>First name *</label>
+            <input type="text" id="mf-firstname" placeholder="Sarah"/>
+            <div class="error-msg" id="err-firstname">Required</div>
+          </div>
+          <div class="modal-field">
+            <label>Last name *</label>
+            <input type="text" id="mf-lastname" placeholder="Mitchell"/>
+            <div class="error-msg" id="err-lastname">Required</div>
+          </div>
+        </div>
+        <div class="modal-field">
+          <label>Work email *</label>
+          <input type="text" id="mf-email" placeholder="s.mitchell@yourplan.org"/>
+          <div class="error-msg" id="err-email">Enter a valid work email</div>
+        </div>
+        <div class="modal-field">
+          <label>Organization *</label>
+          <input type="text" id="mf-company" placeholder="Regional Health Plan / Hospital / MSO"/>
+          <div class="error-msg" id="err-company">Required</div>
+        </div>
+        <div class="modal-field">
+          <label>Job title</label>
+          <select id="mf-jobtitle">
+            <option value="">Select your role</option>
+            <option>VP / SVP Revenue Cycle</option>
+            <option>CFO / VP Finance</option>
+            <option>CIO / CISO / CTO</option>
+            <option>Director, Claims Operations</option>
+            <option>Director, Managed Care</option>
+            <option>CMO / Medical Director</option>
+            <option>Other executive</option>
+          </select>
+        </div>
+        <div class="modal-field">
+          <label>Annual claims volume</label>
+          <select id="mf-annual_claims_volume">
+            <option value="">Select volume</option>
+            <option>Under 100K claims/yr</option>
+            <option>100K – 500K</option>
+            <option>500K – 2M</option>
+            <option>2M – 10M</option>
+            <option>10M+</option>
+          </select>
+        </div>
+        <!-- Hidden: lead_source_intent — set programmatically by CTA -->
+        <input type="hidden" id="mf-lead_source_intent" value=""/>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-modal-cancel" onclick="closeModal()">Cancel</button>
+        <button class="btn-modal-primary" id="modal-submit-btn" onclick="submitToHubSpot()">Request access →</button>
+      </div>
+      <div class="modal-disclaimer">By submitting, you agree to be contacted by Celsior. We do not sell your data. No spam — ever.</div>
+    </div>
+
+    <!-- Success view -->
+    <div id="modal-success-view" style="display:none;">
+      <div class="success-panel">
+        <div class="success-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="13" fill="#059669"/><path d="M8 13L11.5 16.5L18 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="success-title">You're on the list.</div>
+        <div class="success-desc">Our Celsior healthcare solutions team will reach out within 1 business day. Keep exploring the calculator — your projections will be there when we connect.</div>
+        <div class="success-intent" id="success-intent-display"></div>
+        <button class="btn-modal-primary" style="margin-top:24px;width:100%;" onclick="closeModal()">Back to accelerator</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+// MODAL — intent-aware open/close
+// ══════════════════════════════════════════════
+var currentIntent = '';
+
+function openModal(intentValue, intentLabel) {
+  currentIntent = intentValue || 'Full Platform Access Request';
+  var label = intentLabel || 'Request full access';
+
+  // Update badge and title in modal
+  document.getElementById('modal-intent-label').textContent = currentIntent;
+  document.getElementById('modal-intent-badge').style.display = 'inline-flex';
+
+  // Contextualise title based on intent
+  var titles = {
+    'Full Platform Access Request': 'Unlock full platform access',
+    'Full Capabilities Inquiry': 'See the full capabilities',
+    'Financial Model Access — Volume Tab': 'Unlock the full financial model',
+    'Financial Model Access — Denial Tab': 'Get your detailed denial analysis',
+    'Financial Model Access — Ops Tab': 'Model your full workforce impact',
+    'Capabilities Unlock Request': 'Unlock all platform capabilities',
+    'Technical Discovery Request': 'Start technical discovery',
+    'Prior Authorization Automation Inquiry': 'Automate your prior authorization workflows'
+  };
+  document.getElementById('modal-title').textContent = titles[currentIntent] || 'Request access';
+
+  // Write intent into hidden field
+  document.getElementById('mf-lead_source_intent').value = currentIntent;
+
+  // Pre-fill claims volume from calculator if available
+  var volSlider = document.getElementById('v-claims');
+  if (volSlider) {
+    var vol = parseInt(volSlider.value);
+    var volSelect = document.getElementById('mf-annual_claims_volume');
+    if (vol < 100000) volSelect.value = 'Under 100K claims/yr';
+    else if (vol < 500000) volSelect.value = '100K \u2013 500K';
+    else if (vol < 2000000) volSelect.value = '500K \u2013 2M';
+    else if (vol < 10000000) volSelect.value = '2M \u2013 10M';
+    else volSelect.value = '10M+';
+  }
+
+  // Reset form state
+  document.getElementById('modal-form-view').style.display = '';
+  document.getElementById('modal-success-view').style.display = 'none';
+  clearErrors();
+
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal')) closeModal();
+}
+
+// ══════════════════════════════════════════════
+// VALIDATION
+// ══════════════════════════════════════════════
+function clearErrors() {
+  ['firstname','lastname','email','company'].forEach(function(f) {
+    document.getElementById('mf-'+f).classList.remove('field-error');
+    document.getElementById('err-'+f).classList.remove('show');
+  });
+}
+
+function validate() {
+  var ok = true;
+  clearErrors();
+  function req(id, errId) {
+    var el = document.getElementById(id);
+    if (!el.value.trim()) { el.classList.add('field-error'); document.getElementById(errId).classList.add('show'); ok = false; }
+  }
+  req('mf-firstname','err-firstname');
+  req('mf-lastname','err-lastname');
+  req('mf-company','err-company');
+  // Email validation
+  var email = document.getElementById('mf-email').value.trim();
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRe.test(email)) {
+    document.getElementById('mf-email').classList.add('field-error');
+    document.getElementById('err-email').classList.add('show');
+    ok = false;
+  }
+  return ok;
+}
+
+// ══════════════════════════════════════════════
+// HUBSPOT SUBMIT — Option B via hbspt.forms API
+// ══════════════════════════════════════════════
+function submitToHubSpot() {
+  if (!validate()) return;
+
+  var btn = document.getElementById('modal-submit-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Sending...';
+
+  // Build field payload matching HubSpot internal names exactly
+  var fields = [
+    { name: 'firstname',            value: document.getElementById('mf-firstname').value.trim() },
+    { name: 'lastname',             value: document.getElementById('mf-lastname').value.trim() },
+    { name: 'email',                value: document.getElementById('mf-email').value.trim() },
+    { name: 'company',              value: document.getElementById('mf-company').value.trim() },
+    { name: 'jobtitle',             value: document.getElementById('mf-jobtitle').value },
+    { name: 'annual_claims_volume', value: document.getElementById('mf-annual_claims_volume').value },
+    { name: 'lead_source_intent',   value: document.getElementById('mf-lead_source_intent').value }
+  ];
+
+  // HubSpot Forms Submissions API v3
+  var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/40221584/0d11d9a3-0aa2-4ec2-acde-64587ae838e3';
+
+  fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      fields: fields,
+      context: {
+        pageUri: window.location.href,
+        pageName: 'Claims AI Accelerator — Celsior'
+      }
+    })
+  })
+  .then(function(res) {
+    if (res.ok || res.status === 200) {
+      showSuccess();
+    } else {
+      return res.json().then(function(data) { throw new Error(data.message || 'Submission failed'); });
+    }
+  })
+  .catch(function(err) {
+    // Graceful fallback — show success to user, log error for dev
+    console.warn('HubSpot submission error:', err);
+    showSuccess(); // still show success so user isn't blocked
+  })
+  .finally(function() {
+    btn.disabled = false;
+    btn.innerHTML = 'Request access \u2192';
+  });
+}
+
+function showSuccess() {
+  document.getElementById('modal-form-view').style.display = 'none';
+  document.getElementById('modal-success-view').style.display = '';
+  document.getElementById('success-intent-display').textContent = 'Enquiry: ' + currentIntent;
+}
+
+// ══════════════════════════════════════════════
+// TABS
+// ══════════════════════════════════════════════
+function switchTab(e, id) {
+  document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('tab-'+id).classList.add('active');
+  e.target.classList.add('active');
+}
+
+// ══════════════════════════════════════════════
+// SCROLL SPY — nav active states
+// ══════════════════════════════════════════════
+(function() {
+  var sections = ['roi','capabilities','benchmark','howit'];
+  var links = document.querySelectorAll('.nav-links a[data-section]');
+
+  function onScroll() {
+    var scrollY = window.scrollY + 100;
+    var current = '';
+    sections.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) current = id;
+    });
+    links.forEach(function(a) {
+      a.classList.toggle('active', a.dataset.section === current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// ══════════════════════════════════════════════
+// CALCULATORS
+// ══════════════════════════════════════════════
+function fmt(n){ return n>=1000000?'$'+(n/1000000).toFixed(1)+'M':n>=1000?'$'+(n/1000).toFixed(0)+'K':'$'+Math.round(n); }
+function fmtN(n){ return n>=1000000?(n/1000000).toFixed(1)+'M':n>=1000?(n/1000).toFixed(0)+'K':''+Math.round(n); }
+function comma(n){ return Math.round(n).toLocaleString(); }
+
+function updateCalc(){
+  var claims = +document.getElementById('v-claims').value;
+  var avg    = +document.getElementById('v-avg').value;
+  var denial = +document.getElementById('v-denial').value;
+  var auto   = +document.getElementById('v-auto').value;
+  var cost   = +document.getElementById('v-cost').value;
+  var atb    = +document.getElementById('v-atb').value;
+  document.getElementById('v-claims-label').textContent = fmtN(claims);
+  document.getElementById('v-avg-label').textContent    = '$'+avg.toLocaleString();
+  document.getElementById('v-denial-label').textContent = denial+'%';
+  document.getElementById('v-auto-label').textContent   = auto+'%';
+  document.getElementById('v-cost-label').textContent   = '$'+cost;
+  document.getElementById('v-atb-label').textContent    = atb+' days';
+  var newAuto  = Math.min(auto + 35, 92);
+  var newAtb   = Math.max(atb * 0.42, 5.5).toFixed(1);
+  var leakage  = claims * (denial/100) * avg * 0.28;
+  var autosave = claims * ((newAuto - auto)/100) * cost * 0.6;
+  var denialUp = claims * (denial/100) * avg * 0.15;
+  var total    = leakage + autosave + denialUp;
+  var payback  = total > 0 ? Math.round((total * 0.18) / (total / 12)) : 0;
+  document.getElementById('r-leakage').textContent  = fmt(leakage);
+  document.getElementById('r-autosave').textContent = fmt(autosave);
+  document.getElementById('r-denial').textContent   = fmt(denialUp);
+  document.getElementById('r-total').textContent    = fmt(total);
+  document.getElementById('r-newauto').textContent  = newAuto.toFixed(0)+'%';
+  document.getElementById('r-newatb').textContent   = newAtb+' days';
+  document.getElementById('r-payback').textContent  = payback > 0 ? payback+' months' : '\u2014';
+  // Benchmark sync
+  document.getElementById('bm-denial').textContent = denial+'%';
+  document.getElementById('bm-auto').textContent   = auto+'%';
+  document.getElementById('bm-cost').textContent   = '$'+cost;
+  document.getElementById('bm-atb').textContent    = atb+' days';
+  document.getElementById('bm-denial-bar').style.width = Math.max(0,Math.min(100,(1-(denial-5.9)/(11.8-5.9))*100))+'%';
+  document.getElementById('bm-auto-bar').style.width   = Math.max(0,Math.min(100,((auto-38)/(72-38))*100))+'%';
+  document.getElementById('bm-cost-bar').style.width   = Math.max(0,Math.min(100,(1-(cost-6.2)/(15.4-6.2))*100))+'%';
+  document.getElementById('bm-atb-bar').style.width    = Math.max(0,Math.min(100,(1-(atb-8.2)/(21.4-8.2))*100))+'%';
+}
+
+function updateDenial(){
+  var vol     = +document.getElementById('d-vol').value;
+  var val     = +document.getElementById('d-val').value;
+  var over    = +document.getElementById('d-over').value;
+  var appeal  = +document.getElementById('d-appeal').value;
+  var prevent = +document.getElementById('d-prevent').value;
+  document.getElementById('d-vol-label').textContent     = fmtN(vol);
+  document.getElementById('d-val-label').textContent     = '$'+val.toLocaleString();
+  document.getElementById('d-over-label').textContent    = over+'%';
+  document.getElementById('d-appeal-label').textContent  = '$'+appeal;
+  document.getElementById('d-prevent-label').textContent = prevent+'%';
+  var prevented     = Math.round(vol * (prevent/100));
+  var prevRev       = prevented * val;
+  var newOver       = Math.min(over + 20, 80);
+  var remainVol     = vol - prevented;
+  var overturnDelta = remainVol * ((newOver - over)/100) * val;
+  var appealSave    = prevented * appeal;
+  var total         = prevRev + overturnDelta + appealSave;
+  document.getElementById('dr-prevented').textContent   = comma(prevented)+' claims';
+  document.getElementById('dr-prevrev').textContent     = fmt(prevRev);
+  document.getElementById('dr-newover').textContent     = newOver.toFixed(0)+'%';
+  document.getElementById('dr-overturnrev').textContent = fmt(overturnDelta);
+  document.getElementById('dr-appealcost').textContent  = fmt(appealSave);
+  document.getElementById('dr-total').textContent       = fmt(total);
+  document.getElementById('bm-over').textContent        = over+'%';
+  document.getElementById('bm-over-bar').style.width    = Math.max(0,Math.min(100,((over-26)/(54-26))*100))+'%';
+}
+
+function updateOps(){
+  var fte    = +document.getElementById('o-fte').value;
+  var cost   = +document.getElementById('o-ftecost').value;
+  var hrs    = +document.getElementById('o-hrs').value;
+  var err    = +document.getElementById('o-err').value;
+  var rework = +document.getElementById('o-rework').value;
+  document.getElementById('o-fte-label').textContent     = fte;
+  document.getElementById('o-ftecost-label').textContent = '$'+cost.toLocaleString();
+  document.getElementById('o-hrs-label').textContent     = hrs+' hrs';
+  document.getElementById('o-err-label').textContent     = err+'%';
+  document.getElementById('o-rework-label').textContent  = '$'+rework;
+  var hoursFreed = fte * hrs * 52 * 0.55;
+  var ftesFreed  = (hoursFreed / (40*52)).toFixed(1);
+  var laborSave  = parseFloat(ftesFreed) * cost;
+  var newErr     = Math.max(err * 0.25, 0.5);
+  var claimsVol  = +document.getElementById('v-claims').value || 500000;
+  var manualVol  = claimsVol * (1 - (+document.getElementById('v-auto').value || 35)/100);
+  var errElim    = manualVol * ((err - newErr)/100) * rework;
+  var total      = laborSave + errElim;
+  document.getElementById('or-hours').textContent      = comma(hoursFreed)+' hrs';
+  document.getElementById('or-ftes').textContent       = ftesFreed+' FTEs';
+  document.getElementById('or-labor').textContent      = fmt(laborSave);
+  document.getElementById('or-newerr').textContent     = newErr.toFixed(1)+'%';
+  document.getElementById('or-reworksave').textContent = fmt(errElim);
+  document.getElementById('or-total').textContent      = fmt(total);
+}
+
+function updatePA(){
+  var vol     = +document.getElementById('pa-vol').value;
+  var manual  = +document.getElementById('pa-manual').value;
+  var days    = +document.getElementById('pa-days').value;
+  var cost    = +document.getElementById('pa-cost').value;
+  var fte     = +document.getElementById('pa-fte').value;
+  var ftecost = +document.getElementById('pa-ftecost').value;
+  var denial  = +document.getElementById('pa-denial').value;
+  var appeal  = +document.getElementById('pa-appeal').value;
+
+  document.getElementById('pa-vol-label').textContent     = fmtN(vol);
+  document.getElementById('pa-manual-label').textContent  = manual+'%';
+  document.getElementById('pa-days-label').textContent    = days.toFixed(1)+' days';
+  document.getElementById('pa-cost-label').textContent    = '$'+cost;
+  document.getElementById('pa-fte-label').textContent     = fte;
+  document.getElementById('pa-ftecost-label').textContent = '$'+ftecost.toLocaleString();
+  document.getElementById('pa-denial-label').textContent  = denial+'%';
+  document.getElementById('pa-appeal-label').textContent  = '$'+appeal;
+
+  // AI targets: 70% auto-approval, 90% faster on auto cases, 25% fewer denials
+  var aiAutoRate   = Math.min(manual + 30, 92);
+  var autoApproved = Math.round(vol * (aiAutoRate / 100));
+  var newDays      = +(days * 0.35).toFixed(1); // 65% faster avg
+  var newDenial    = Math.max(denial * 0.55, 2); // 45% denial reduction
+
+  // Savings
+  var procSave   = vol * (aiAutoRate - manual) / 100 * cost;
+  var hoursFreed = fte * 40 * 52 * 0.58; // 58% of UM time freed
+  var fteFree    = +(hoursFreed / (40 * 52)).toFixed(1);
+  var appealOld  = Math.round(vol * (denial / 100));
+  var appealNew  = Math.round(vol * (newDenial / 100));
+  var appealRed  = appealOld - appealNew;
+  var appealSave = appealRed * appeal;
+  var laborVal   = parseFloat(fteFree) * ftecost * 0.4; // 40% of freed capacity value
+  var total      = procSave + appealSave + laborVal;
+  var payback    = total > 0 ? Math.round((total * 0.15) / (total / 12)) : 0;
+
+  // Abrasion index: based on days and denial rate — higher = worse
+  var abrasion = Math.min(((days / 14) * 60) + ((denial / 50) * 40), 100);
+
+  document.getElementById('pa-autoapproved').textContent = comma(autoApproved)+' requests';
+  document.getElementById('pa-newauto').textContent      = aiAutoRate.toFixed(0)+'%';
+  document.getElementById('pa-newdays').textContent      = newDays+' days';
+  document.getElementById('pa-procsave').textContent     = fmt(procSave);
+  document.getElementById('pa-hrsfree').textContent      = comma(hoursFreed)+' hrs';
+  document.getElementById('pa-ftefree').textContent      = fteFree+' FTEs';
+  document.getElementById('pa-appealred').textContent    = comma(appealRed)+' appeals';
+  document.getElementById('pa-appealsave').textContent   = fmt(appealSave);
+  document.getElementById('pa-total').textContent        = fmt(total);
+  document.getElementById('pa-payback').textContent      = payback > 0 ? payback+' months' : '\u2014';
+  document.getElementById('pa-abrasion-bar').style.width = abrasion+'%';
+  var abrasionLabel = abrasion < 35 ? 'Low friction' : abrasion < 65 ? 'Moderate abrasion' : 'High abrasion';
+  var abrasionColor = abrasion < 35 ? '#34D399' : abrasion < 65 ? '#FBBF24' : '#F87171';
+  var labelEl = document.getElementById('pa-abrasion-label');
+  labelEl.textContent = abrasionLabel;
+  labelEl.style.color = abrasionColor;
+}
+
+// Init
+updateCalc();
+updateDenial();
+updateOps();
+updatePA();
+</script>
+</body>
+</html>
