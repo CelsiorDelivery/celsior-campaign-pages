@@ -353,3 +353,17 @@ a.nav-link{text-decoration:none;}
   flex: 1 !important;
 }
 
+
+/* Megamenu Learn More CTA: keep text/icon white */
+#navbar .mz-explore,
+.mega-root .mz-explore,
+.mobile-drawer .drawer-mega-explore {
+  color: #fff !important;
+}
+
+#navbar .mz-explore svg,
+.mega-root .mz-explore svg,
+.mobile-drawer .drawer-mega-explore svg {
+  color: #fff !important;
+  stroke: currentColor !important;
+}
