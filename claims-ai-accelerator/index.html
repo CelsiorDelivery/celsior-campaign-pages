@@ -247,19 +247,45 @@
     .nav-divider { display: none; }
   }
 </style>
+<link rel="stylesheet" href="../assets/celsior-shell/celsior-shell.css">
+
+<style id="claims-ai-celsior-shell-integration">
+  #navbar {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  /*
+   * Claims AI tool navigation:
+   * remove duplicate branding, retain original controls,
+   * and distribute the three existing groups across
+   * the same content margins as the page body.
+   */
+  #main-nav .nav-inner {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: space-between !important;
+  }
+
+  #main-nav .nav-product,
+  #main-nav .nav-links,
+  #main-nav .nav-cta {
+    flex: 0 0 auto !important;
+  }
+
+  #main-nav .nav-cta {
+    margin-left: 0 !important;
+  }
+</style>
+
 </head>
 <body>
 
 <!-- ══ NAV ══ -->
 <nav id="main-nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <!-- SWAP: replace src below with your HubSpot CDN URL for the full-color Celsior logo -->
-      <img src="../assets/brand/celsior-logo.svg" alt="Celsior" style="filter:brightness(0);" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-      <!-- Fallback wordmark shown only if image fails to load -->
-      <span style="display:none;font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--navy-deep);letter-spacing:-0.5px;">celsior<span style="color:var(--blue-steel);">∷</span></span>
-    </a>
-    <div class="nav-divider"></div>
     <div class="nav-product">Claims<span>AI</span> Accelerator</div>
     <nav class="nav-links">
       <a href="#roi" data-section="roi">ROI Calculator</a>
@@ -639,21 +665,7 @@
 </section>
 
 <!-- ══ FOOTER ══ -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <!-- SWAP: replace src below with your HubSpot CDN URL for the white Celsior logo -->
-      <img src="../assets/brand/celsior-logo.svg" alt="Celsior" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-      <span style="display:none;font-family:var(--font-display);font-weight:800;font-size:16px;color:rgba(255,255,255,0.7);letter-spacing:-0.5px;">celsior</span>
-    </div>
-    <div class="footer-note">All calculations are estimates based on industry benchmarks and user-supplied inputs. No data entered into this tool is transmitted, stored, or processed outside your browser. For illustrative purposes only.</div>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">HIPAA</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-</footer>
+
 
 <!-- ══ MODAL ══ -->
 <div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
@@ -1089,5 +1101,7 @@ updateDenial();
 updateOps();
 updatePA();
 </script>
+<script src="../assets/celsior-shell/config.js"></script>
+<script src="../assets/celsior-shell/celsior-shell.js"></script>
 </body>
 </html>
