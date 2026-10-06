@@ -10,8 +10,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script type="module" crossorigin src="/ai-readiness-test/assets/index-km3dzm3k.js"></script>
     <link rel="stylesheet" crossorigin href="/ai-readiness-test/assets/index-mxwh5vof.css">
+    <link rel="stylesheet" href="../assets/celsior-shell/celsior-shell.css">
+
+    <style id="ai-readiness-celsior-shell-integration">
+      /* The global Celsior shell replaces the app's original simple header/footer. */
+      #root .site-header,
+      #root .site-footer {
+        display: none !important;
+      }
+
+      /* Keep the AI Readiness application isolated from global shell layout rules. */
+      #root .container {
+        width: min(1140px, calc(100% - 32px)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* Give assessment/progress screens their own clear row below the Celsior nav. */
+      #root .assessment-wrap {
+        padding-top: 32px !important;
+      }
+
+      #root .progress-row {
+        position: relative !important;
+        z-index: 1 !important;
+        margin-bottom: 12px !important;
+      }
+
+      #root .progress-track {
+        position: relative !important;
+        z-index: 1 !important;
+        margin-bottom: 14px !important;
+      }
+
+      /* The Celsior navbar should occupy normal document space for this tool. */
+      #navbar {
+        position: relative !important;
+        top: auto !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <script src="../assets/celsior-shell/config.js"></script>
+    <script src="../assets/celsior-shell/celsior-shell.js"></script>
   </body>
 </html>
