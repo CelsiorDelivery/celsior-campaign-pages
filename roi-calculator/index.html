@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Modernization ROI Calculator</title>
+    <link rel="icon" type="image/svg+xml" href="/roi-calculator/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/roi-calculator/assets/index-bdv8mgtd.js"></script>
+    <link rel="stylesheet" crossorigin href="/roi-calculator/assets/index-ckyfzwf7.css">
+    <link rel="stylesheet" href="../assets/celsior-shell/celsior-shell.css">
+
+    <style id="roi-calculator-celsior-shell-integration">
+      /*
+       * The reusable Celsior shell replaces the calculator's
+       * original standalone header and footer.
+       */
+      #root header,
+      #root footer {
+        display: none !important;
+      }
+
+      /*
+       * Keep the Celsior global navbar in normal document flow.
+       * The calculator itself handles its own internal content.
+       */
+      #navbar {
+        position: relative !important;
+        top: auto !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="../assets/celsior-shell/config.js"></script>
+    <script src="../assets/celsior-shell/celsior-shell.js"></script>
+  </body>
+</html>
